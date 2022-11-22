@@ -1,0 +1,106 @@
+36
+8:48am
+https://github.com/louisecortel/midterm-activities/upload/main
+
+
+import java.util.Scanner;
+public class RunAnimal {
+
+public static void main(String[] args) {
+
+Scanner sc = new Scanner(System.in);
+String choose = sc.nextLine();
+System.out.print("Choose an animal. Press B for Bird, C for Car, or D for Dog: ");
+
+if (choose.equalsIgnoreCase("B")) {
+Bird br = new Bird();
+
+br.eat();
+br.sleep();
+br.makeSound();
+
+}
+if (choose.equalsIgnoreCase("C")) {
+Cat ca = new Cat();
+
+ca.eat();
+ca.sleep();
+ca.makeSound();
+
+}
+if (choose.equalsIgnoreCase("D")) {
+Dog do = new Dog();
+
+do.eat();
+do.sleep();
+do.makeSound();
+}
+else {
+System.out.println("Invalid Input");
+}
+sc.close();
+
+}
+
+}
+
+Previous
+
+
+public abstract class Animal {
+
+    public abstract void eat();
+    public abstract void sleep();
+    public abstract void makesound(); 
+    	
+  }  
+
+public abstract class Cat extends Animal {
+
+     @override
+  	public void eat(){
+  		System.out.println("Cat loves to eat fish);
+  	}
+  	 @override
+    public sleep(){
+    	System.out.println("and sleep for 12-16 hours a day ");
+    }
+     @override
+    public makesound(){
+    	System.out.println("meow meow");
+    	
+    }
+
+
+public abstract class Bird extends Animal {
+
+
+     @override
+  	public void eat(){
+  		System.out.println("Bird loves to eat seeds);
+  	}
+  	 @override
+    public void sleep(){
+    	System.out.println("and sleep for 12-16 hours a day ");
+    }
+     @override
+    public void makesound(){
+    	System.out.println("tweet tweet");
+    }
+
+public abstract class Dog extends Animal {
+
+
+   @override
+   public void eat() {
+  		System.out.println("Dog loves to eat dogfood");
+   }
+   @override
+   public void sleep(){
+    	System.out.println("and sleep for 12-16 hours a day ");
+    	
+   }
+   @override
+   public void makesound(){
+    	System.out.println("arf arf");
+   } 	
